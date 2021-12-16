@@ -1,0 +1,12 @@
+<div class="map-wrapper border border-secondary rounded">
+  <p class="m-0 p-2 bg-light rounded">Map</p>
+  <p class="pl-4 pt-2 pb-2" *ngIf="!showMap">Select truck first...</p>
+  <div [ngSwitch]="mapType" *ngIf="showMap">
+    <div *ngSwitchCase="'google'">
+      <app-google [driver]="driver"></app-google>
+    </div>
+    <div *ngSwitchCase="'leaflet'">
+      <app-leaflet [driver]="driver"></app-leaflet>
+    </div>
+  </div>
+</div>

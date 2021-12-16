@@ -1,0 +1,47 @@
+<div [class.d-none]="!addNewModalIsOpen" class="modal-wrapper">
+  <div class="bg-white rounded pr-2 pb-2 pl-2 modal-window">
+    <p class="m-0 p-2 bg-light rounded">Add new asset</p>
+    <div class="input-group mb-3 pl-3 mt-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="truckName">Name</span>
+      </div>
+      <input type="text"
+             class="form-control"
+             aria-label="Truck name"
+             aria-describedby="truckName"
+             [(ngModel)]="name"
+      >
+    </div>
+    <div class="input-group mb-3 pl-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="latitude">Latitude</span>
+      </div>
+      <input type="text"
+             class="form-control"
+             aria-label="Latitude"
+             aria-describedby="latitude"
+             [(ngModel)]="latitude"
+      >
+    </div>
+    <div class="input-group mb-3 pl-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="longitude">Longitude</span>
+      </div>
+      <input type="text"
+             class="form-control"
+             aria-label="Longitude"
+             aria-describedby="longitude"
+             [(ngModel)]="longitude"
+      >
+    </div>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-warning mr-3" (click)="closeModal()">Cancel</button>
+      <button class="btn btn-success mr-2" (click)="addAsset()">Add</button>
+    </div>
+    <div [class.d-none]="!errors.length">
+      <p class="text-danger" *ngFor="let error of errors">
+        {{error}}
+      </p>
+    </div>
+  </div>
+</div>

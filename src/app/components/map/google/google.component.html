@@ -1,0 +1,11 @@
+<agm-map [latitude]="driver.latitude"
+         [longitude]="driver.longitude"
+         class="map-container"
+         [zoom]="5"
+>
+  <agm-marker [latitude]="driver.latitude"
+              [longitude]="driver.longitude"
+  >
+    <agm-info-window [isOpen]="'true'">{{driver.name}}</agm-info-window>
+  </agm-marker>
+</agm-map>

@@ -1,0 +1,7 @@
+<div class="truck-list border border-secondary rounded">
+  <p class="m-0 p-2 bg-light rounded">Assets</p>
+  <app-single-truck *ngFor="let driver of drivers" [name]="driver.name">
+    <p class="pl-4 mb-0">{{driver.name}}</p>
+  </app-single-truck>
+  <p class="pl-4 pt-2 pb-2" *ngIf="!drivers.length">Nothing to show...</p>
+</div>

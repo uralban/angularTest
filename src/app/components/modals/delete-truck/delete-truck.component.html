@@ -1,0 +1,12 @@
+<div [class.d-none]="!closeModalIsOpen" class="modal-wrapper">
+  <div class="bg-white rounded pr-2 pb-2 pl-2 modal-window">
+    <p class="m-0 p-2 bg-light rounded">Warning</p>
+    <p class="pt-4 pl-2 pr-4 pb-3">
+      Are you sure you want to delete <strong>{{name}}</strong> ?
+    </p>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-warning mr-3" (click)="closeModal()">Cancel</button>
+      <button class="btn btn-danger mr-3" (click)="deleteAsset()">Delete</button>
+    </div>
+  </div>
+</div>
